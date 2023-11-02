@@ -1,8 +1,8 @@
 from typing import List
 
+
 class Solution:
     def compress(self, chars: List[str]) -> int:
-        
         i = 0
         s = ""
         while i < len(chars):
@@ -19,7 +19,7 @@ class Solution:
             if count > 1:
                 s += str(count)
             i += count
-        
+
         chars.clear()
         for char in s:
             chars.append(char)
