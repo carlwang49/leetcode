@@ -1,10 +1,9 @@
 from typing import List
 
+
 class Solution1:
     def increasingTriplet(self, nums: List[int]) -> bool:
-
         def find_insert_position(sorted_nums: List[int], key: int):
-
             left = 0
             right = len(sorted_nums) - 1
 
@@ -31,18 +30,17 @@ class Solution1:
 
             if len(ans) >= 3:
                 return True
-        
+
         return False
-    
+
 
 class Solution2:
     def increasingTriplet(self, nums: List[int]) -> bool:
-
-        first = second = float('inf')
+        first = second = float("inf")
         for num in nums:
-            if num <= first: # 找第一小的數字
+            if num <= first:  # 找第一小的數字
                 first = num
-            elif num <= second: # 找第二小的數字
+            elif num <= second:  # 找第二小的數字
                 second = num
             else:
                 return True
