@@ -9,7 +9,7 @@ class Solution:
             if (
                 i + 1 < len(flowerbed) and flowerbed[i + 1] == 1
             ):  # 如果後一個位置存在，且該位置有種花，那此位置不能種花
-                continu
+                continue
             if flowerbed[i] == 0:  # 前後都沒有種花
                 flowerbed[i] = 1
                 n -= 1
