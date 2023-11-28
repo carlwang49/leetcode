@@ -16,3 +16,20 @@ class Solution:
             if n <= 0:
                 return True
         return False
+
+
+class Solution:
+    def canPlaceFlowers(self, flowerbed: List[int], n: int) -> bool:
+        
+        flowerbed = [0] + flowerbed + [0]
+        zero_count = 0
+        counter = 0
+        for i in range(len(flowerbed)):
+            if flowerbed[i] == 0:
+                zero_count += 1
+            elif flowerbed[i] == 1:
+                counter += (zero_count - 1) // 2
+                zero_count = 0
+        
+        counter += (zero_count - 1) // 2
+        return True if counter - n >= 0 else False
